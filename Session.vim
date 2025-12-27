@@ -20,7 +20,7 @@ badd +4 .prettierrc.json
 badd +9 babel.config.json
 badd +21 tsconfig.json
 badd +3 stylelint.config.mjs
-badd +1 source/server/component/index.js
+badd +69 source/server/component/index.js
 badd +3 source/server/index.js
 argglobal
 %argdel
@@ -167,13 +167,6 @@ keepjumps 3
 normal! 015|
 tabnext
 edit source/server/index.js
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
 argglobal
 setlocal foldmethod=manual
 setlocal foldexpr=0
@@ -193,6 +186,13 @@ keepjumps 3
 normal! 012|
 tabnext
 edit source/server/component/index.js
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
 argglobal
 setlocal foldmethod=manual
 setlocal foldexpr=0
@@ -204,19 +204,21 @@ setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 21) / 43)
+let s:l = 69 - ((34 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 022|
-tabnext 8
+keepjumps 69
+normal! 02|
+tabnext 9
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
