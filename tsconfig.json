@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "jsx": "react-jsx",
+    "paths": {
+      "server/*": [
+        "./source/server/*"
+      ],
+      "client/*": [
+        "./source/client/*"
+      ]
+    }
+  },
+  "exclude": [
+    "./target/"
+  ]
+}
