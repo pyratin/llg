@@ -5,5 +5,19 @@
   "license": "ISC",
   "author": "",
   "main": "index.js",
-  "scripts": {}
+  "scripts": {},
+  "devDependencies": {
+    "@eslint/css": "^0.14.1",
+    "@eslint/js": "^9.39.2",
+    "@eslint/json": "^0.14.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsdoc": "^61.5.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "globals": "^16.5.0",
+    "prettier-plugin-jsdoc": "^1.8.0",
+    "typescript-eslint": "^8.50.1"
+  }
 }
