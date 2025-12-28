@@ -15,22 +15,21 @@ else
 endif
 badd +1 .gitignore
 badd +1 package.json
-badd +42 eslint.config.mjs
+badd +47 eslint.config.mjs
 badd +4 .prettierrc.json
 badd +9 babel.config.json
-badd +21 tsconfig.json
+badd +13 tsconfig.json
 badd +3 stylelint.config.mjs
 badd +69 source/server/component/index.js
 badd +3 source/server/index.js
-badd +68 webpack.config.js
+badd +38 webpack.config.js
 badd +9 source/client/index.html
-badd +9 source/client/index.js
+badd +2 source/client/index.js
 badd +2 source/client/style/index.scss
-badd +8 source/client/Route/index.js
-badd +5 source/client/Route/Component/BunnySprite/index.js
+badd +77 source/client/Route/index.js
+badd +17 source/client/Route/Component/BunnySprite/index.js
 argglobal
 %argdel
-tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
@@ -95,12 +94,12 @@ setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 42 - ((33 * winheight(0) + 21) / 43)
+let s:l = 47 - ((38 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 42
-normal! 01|
+keepjumps 47
+normal! 023|
 tabnext
 edit .prettierrc.json
 argglobal
@@ -152,12 +151,12 @@ setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 25 - ((24 * winheight(0) + 21) / 43)
+let s:l = 13 - ((12 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 25
-normal! 0
+keepjumps 13
+normal! 040|
 tabnext
 edit stylelint.config.mjs
 argglobal
@@ -190,7 +189,7 @@ setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 3 - ((2 * winheight(0) + 17) / 35)
+let s:l = 3 - ((2 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -228,12 +227,12 @@ setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 14 - ((13 * winheight(0) + 21) / 43)
+let s:l = 40 - ((38 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 14
-normal! 0
+keepjumps 40
+normal! 047|
 tabnext
 edit source/client/index.html
 argglobal
@@ -266,12 +265,12 @@ setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 10 - ((9 * winheight(0) + 21) / 43)
+let s:l = 3 - ((2 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10
-normal! 036|
+keepjumps 3
+normal! 0
 tabnext
 edit source/client/Route/index.js
 argglobal
@@ -285,38 +284,12 @@ setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 7 - ((6 * winheight(0) + 21) / 43)
+let s:l = 70 - ((11 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 7
-normal! 020|
-tabnext
-edit source/client/Route/Component/BunnySprite/index.js
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-argglobal
-setlocal foldmethod=manual
-setlocal foldexpr=0
-setlocal foldmarker={{{,}}}
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldenable
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 5 - ((4 * winheight(0) + 21) / 43)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 5
-normal! 029|
+keepjumps 70
+normal! 030|
 tabnext
 edit source/client/style/index.scss
 argglobal
@@ -335,8 +308,8 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 2
-normal! 053|
-tabnext 14
+normal! 0
+tabnext 13
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif

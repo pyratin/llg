@@ -44,7 +44,7 @@ export default defineConfig([
       ],
       'react/no-unknown-property': [
         'error',
-        { ignore: ['texture', 'anchor', 'eventMode'] }
+        { ignore: ['css', 'texture', 'anchor', 'eventMode'] }
       ]
     }
   }
